@@ -1,8 +1,9 @@
 # ⚡ Lightning
 
 <div align="center">
-  <img src="info/banner.svg" />
+  <img src="https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/info/lightning-logo.svg" alt="Lightning Logo" width="200"/>
   
+  ![AI Pulse](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/ai-pulse.svg#gh-light-mode-only)
   ![Code Flow](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/code-flow.svg#gh-dark-mode-only)
 
   [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -11,8 +12,11 @@
   [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 </div>
 
-# ⚡ Lightning: AI-Powered Full-Stack Accelerator
-**Lightning** is an AI-powered full-stack engineering system that transforms natural language prompts into production-ready code. Built with **Next.js**, **Tailwind CSS**, and **Shadcn/UI**, Lightning is optimized for **Vercel**, empowering developers to generate modern, secure, and scalable applications from simple instructions.
+---
+
+## ⚡ Lightning: AI-Powered Full-Stack Accelerator
+
+**Lightning** is an AI-first full-stack engineering system that turns natural language into production-ready code. Powered by **Next.js**, **Tailwind CSS**, and **Shadcn/UI**, Lightning supports **Vercel** out of the box for blazing-fast deployments.
 
 > 🚀 Version: 3.5.0  
 > 🎯 Codename: *Lightning*  
@@ -22,7 +26,7 @@
 
 ## 🌩️ Introduction
 
-Lightning revolutionizes full-stack development with natural language → code generation. It supports multiple AI providers (OpenAI, Together AI, Groq) and generates high-quality apps with strict standards across security, performance, SEO, and accessibility.
+Lightning revolutionizes full-stack development by bridging AI prompts to structured, modern, and scalable codebases. It supports **Groq**, **Together AI**, and **OpenAI** with AI agent behavior files (`v0.txt`, `system.txt`) to deliver highly reliable code.
 
 ---
 
@@ -57,20 +61,19 @@ git clone https://github.com/likhonsheikh54/Lightning.git
 cd Lightning
 npm install
 npm run dev
-```
 
-Visit [http://localhost:3000](http://localhost:3000)
+Visit http://localhost:3000
 
----
+⸻
 
-## ✨ Example Prompt Usage
+✨ Prompt Usage Example
 
-### Prompt:
-> "Create a login page with email and password fields, using Shadcn/UI components and Tailwind CSS."
+Prompt:
 
-### AI Output:
+“Create a login page with email and password fields, using Shadcn/UI components and Tailwind CSS.”
 
-```tsx
+Output:
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -86,164 +89,213 @@ export const Login = () => {
     </div>
   );
 };
-```
 
----
 
-## 🤖 AI Provider Support
 
-Configure any or all:
+⸻
 
-```env
+🤖 AI Provider Configuration
+
+# Add these in your .env.local
+OPENAI_API_KEY=your_openai_api_key
 TOGETHER_API_KEY=your_together_api_key
 GROQ_API_KEY=your_groq_api_key
-```
 
----
 
-## 🧠 AI Agent v0 Configuration
 
-| File          | Role                                          |
-|---------------|-----------------------------------------------|
-| `v0.txt`      | Blueprint for folder structure & design rules |
-| `system.txt`  | System prompt behavior for secure output      |
+⸻
 
-> These files can be dynamically edited via GitHub and auto-loaded at runtime.
+🧠 AI Agent Files
 
----
+File	Role
+v0.txt	Controls folder structure and code standards
+system.txt	Governs agent behavior, safety, and context
 
-## 🏗️ Architecture
 
-```mermaid
+
+⸻
+
+⚡ Groq Provider (New!)
+
+Path: /ai-provider/groq
+Component: <AiProviderGroq />
+
+🔽 Groq Setup Instructions
+
+# Add your key
+GROQ_API_KEY=your_groq_api_key
+
+# Install dependencies
+npm install axios
+
+
+
+⸻
+
+🔽 Usage in Lightning
+
+const provider = "groq";
+const response = await generateCode(prompt, provider);
+
+Groq is auto-selected when no other provider is set, but can also be forced.
+
+⸻
+
+🔽 Supported Features
+	•	LLaMA-3 & LLaMA-70B
+	•	High-speed generation
+	•	Works well for:
+	•	Code generation
+	•	SEO content
+	•	Bulk agent loops
+
+⸻
+
+🔽 Performance
+	•	~10x faster than OpenAI
+	•	Token latency: 0.1s avg
+	•	Ideal for:
+	•	Real-time tools
+	•	Bulk page generation
+
+⸻
+
+🔽 Best Practices
+	•	Keep prompts short + structured
+	•	Avoid excessive loops
+	•	Validate response before rendering
+
+⸻
+
+🔽 Example Integration
+
+import axios from 'axios';
+
+const groqRequest = async (prompt: string) => {
+  const res = await axios.post(
+    'https://api.groq.com/v1/chat/completions',
+    {
+      model: 'llama3-70b-8192',
+      messages: [{ role: 'user', content: prompt }],
+    },
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+      },
+    }
+  );
+  return res.data.choices[0].message.content;
+};
+
+
+
+⸻
+
+🧬 Architecture
+
 graph TD
-    A[User Prompt] --> B[AI Agent v0]
-    B --> C[Code Generation]
-    C --> D[Frontend: Next.js, Tailwind, Shadcn/UI]
-    C --> E[Backend: Next.js API Routes]
-    D --> F[Deployment: Vercel]
-    E --> F
-    G[Configuration: v0.txt, system.txt] --> B
-```
+  A[User Prompt] --> B[AI Agent v0]
+  B --> C[Code Generation]
+  C --> D[Frontend: Next.js + Tailwind + Shadcn/UI]
+  C --> E[Backend: Next.js API Routes]
+  D --> F[Deployment: Vercel]
+  E --> F
+  G[v0.txt + system.txt] --> B
 
----
 
-## 📁 Folder Structure
 
-```
+⸻
+
+📁 Folder Structure
+
 /app         → App Router pages
 /api         → API routes
 /components  → UI Components
 /lib         → Utilities
-/hooks       → Custom React hooks
-/types       → TypeScript interfaces/types
+/hooks       → Custom hooks
+/types       → TypeScript interfaces
 /utils       → Common helpers
 /public      → Static assets
 /styles      → Global CSS
-```
+
+
+
+⸻
+
+✅ Standards
+
+UI
+	•	Dark mode
+	•	Black background
+	•	Rounded borders
+	•	Mobile-first responsive
+	•	Shadcn & accessible
+
+SEO
+	•	Open Graph
+	•	robots.txt + sitemap
+	•	JSON-LD schema
+	•	Metadata API
+
+Security
+	•	OWASP Top 10
+	•	Rate limiting
+	•	Zod validation
+	•	CSP + CSRF
+
+Performance
+	•	Lazy loading
+	•	Edge functions
+	•	Core Web Vitals
+	•	Image optimization
+
+⸻
+
+🚀 Deploying to Vercel
+	1.	Push your code to GitHub
+	2.	Link repo to Vercel
+	3.	Set environment variables
+	4.	Deploy
+
+⸻
+
+🧪 Testing
+	•	Jest – unit tests
+	•	Cypress – E2E
+	•	React Testing Library – components
+	•	axe-core – accessibility
+	•	Lighthouse – performance
+
+⸻
+
+📊 Monitoring
+	•	Vercel analytics
+	•	Error and usage tracking
+	•	API latency metrics
+
+⸻
+
+🙌 Contributing
+	1.	Fork this repo
+	2.	Create a new branch
+	3.	Commit and push
+	4.	Open a pull request
+
+Join our dev circle:
+	•	Telegram: @likhonsheikh
+	•	GitHub: github.com/likhonsheikh54
+	•	Site: likhon.dev
+
+⸻
+
+📄 License
+
+MIT License — See LICENSE for details.
+
+⸻
+
+Built with ❤️ by Likhon Sheikh.
 
 ---
 
-## 🔧 Standards
-
-### ✅ UI
-- Black background (`#000000`)
-- Rounded corners (≥ 0.5rem)
-- Responsive, dark mode, mobile-first
-- Accessible (WCAG AA)
-
-### 🔒 Security
-- OWASP Top 10
-- Zod validation
-- CSRF, CSP, rate limiting
-
-### 📊 SEO
-- Metadata API
-- robots.txt + sitemap
-- Open Graph + Twitter cards
-- JSON-LD schema
-
-### ⚡ Performance
-- Core Web Vitals
-- Code splitting, lazy loading
-- SSR and edge functions
-- Image optimization
-
----
-
-## 🚀 Deployment (Vercel)
-
-1. Push to GitHub
-2. Connect GitHub to Vercel
-3. Add environment variables
-4. Deploy with 1-click
-
-### 🔁 GitHub Actions
-
-`.github/workflows/deploy.yml`
-
-```yaml
-name: Deploy to Vercel
-on:
-  push:
-    branches:
-      - main
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Deploy to Vercel
-        run: npx vercel --token=${{ secrets.VERCEL_TOKEN }}
-```
-
----
-
-## 🧪 Testing
-
-- **Jest** – unit tests
-- **React Testing Library** – component tests
-- **Cypress** – E2E testing
-- **Lighthouse** – performance
-- **axe-core** – accessibility
-
----
-
-## 📊 Monitoring
-
-- **Vercel Analytics**
-- **Error & performance monitoring**
-- **User analytics**
-
----
-
-## 🙌 Contributing
-
-1. Fork the repo
-2. Create a feature branch
-3. Commit changes
-4. Open a PR
-
-Join the dev circle:
-
-- Telegram: [t.me/likhonsheikh](https://t.me/likhonsheikh)
-- GitHub: [github.com/likhonsheikh54](https://github.com/likhonsheikh54)
-- Website: [likhon.dev](https://likhon.dev)
-
----
-
-## 📄 License
-
-**MIT License** – See `LICENSE` file.
-
----
-Just say the word ⚡
-
-**Built with ❤️ by Likhon Sheikh.**
+Would you like this pushed as the default `README.md` in your GitHub repo directly via API, or want it embedded in your docs route under `/docs` as a rendered Markdown view?
