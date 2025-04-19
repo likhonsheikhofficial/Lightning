@@ -95,7 +95,6 @@ export const Login = () => {
 Configure any or all:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key
 TOGETHER_API_KEY=your_together_api_key
 GROQ_API_KEY=your_groq_api_key
 ```
