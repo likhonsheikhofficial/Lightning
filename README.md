@@ -1,5 +1,18 @@
 # ⚡ Lightning
+<div align="center">
+  <img src="https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/lightning-logo.svg" alt="Lightning Logo" width="200"/>
+  
+  ![AI Pulse](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/ai-pulse.svg#gh-light-mode-only)
+  ![Code Flow](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/code-flow.svg#gh-dark-mode-only)
 
+  [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+  [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+</div>
+
+# ⚡ Lightning: AI-Powered Full-Stack Accelerator
 **Lightning** is an AI-powered full-stack engineering system that transforms natural language prompts into production-ready code. Built with **Next.js**, **Tailwind CSS**, and **Shadcn/UI**, Lightning is optimized for **Vercel**, empowering developers to generate modern, secure, and scalable applications from simple instructions.
 
 > 🚀 Version: 3.5.0  
