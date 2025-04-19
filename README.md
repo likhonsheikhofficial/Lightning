@@ -1,6 +1,6 @@
 # ⚡ Lightning
 <div align="center">
-  <img src="info/banner.svg" alt="Lightning Logo" width="200"/>
+  <img src="info/banner.svg" 
   
 
   ![Code Flow](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/code-flow.svg#gh-dark-mode-only)
