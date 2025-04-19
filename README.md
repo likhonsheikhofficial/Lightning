@@ -1,59 +1,65 @@
-Lightning ⚡
-An AI-powered full-stack engineering system that transforms natural language prompts into production-ready code. Optimized for Vercel, built with Next.js, Tailwind CSS, and Shadcn/UI, Lightning streamlines both frontend and backend development with a focus on scalability, security, and modern web practices.
+# ⚡ Lightning
 
-Introduction
-Lightning revolutionizes full-stack development by leveraging cutting-edge AI to convert natural language prompts into scalable, secure, and SEO-optimized web applications. Whether you're building a responsive UI or a serverless backend, Lightning provides a robust foundation for developers seeking speed, flexibility, and innovation. This guide offers everything you need to get started, configure, and deploy your projects with ease.
+**Lightning** is an AI-powered full-stack engineering system that transforms natural language prompts into production-ready code. Built with **Next.js**, **Tailwind CSS**, and **Shadcn/UI**, Lightning is optimized for **Vercel**, empowering developers to generate modern, secure, and scalable applications from simple instructions.
 
-Getting Started
-Prerequisites
-**<div align="center">
-  <img src="https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/lightning-logo.svg" alt="Lightning Logo" width="250" height="250"/>
+> 🚀 Version: 3.5.0  
+> 🎯 Codename: *Lightning*  
+> 👨‍💻 Creator: [Likhon Sheikh](https://github.com/likhonsheikh54)
 
-  [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
-  [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-</div>
+---
 
-## What It Does
+## 🌩️ Introduction
 
-// Transforms AI interactions into production-ready code
-- Reads project logic from:
-  - [`v0.txt`](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/v0.txt)
-  - [`system.txt`](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/system.txt)
-- Converts prompts into:
-  - **Typed React + Tailwind + Shadcn UI**
-  - **API routes, env config, SEO meta**
-  - **Secure, scalable, structured apps****
-Node.js: Version 16 or later
-npm or yarn: Package manager for dependencies
-Git: For cloning the repository
+Lightning revolutionizes full-stack development with natural language → code generation. It supports multiple AI providers (OpenAI, Together AI, Groq) and generates high-quality apps with strict standards across security, performance, SEO, and accessibility.
 
-Setup Instructions
 
-Clone the Repository
-git clone https://github.com/likhonsheikhcodes/Lightning.git
+---
+
+## 📦 Tech Stack
+
+| Tool            | Use Case                             |
+|-----------------|--------------------------------------|
+| **Next.js**     | App Router, SSR, API Routes          |
+| **Tailwind CSS**| Modern utility-first CSS             |
+| **Shadcn/UI**   | UI components                        |
+| **TypeScript**  | Type safety, strict mode             |
+| **Supabase**    | Auth & Database                      |
+| **Zod**         | Input validation                     |
+| **React Query** | Data fetching and caching            |
+| **NextAuth.js** | Authentication flows                 |
+| **Vercel**      | Serverless deployments + analytics   |
+
+---
+
+## ⚙️ Getting Started
+
+### ✅ Prerequisites
+
+- **Node.js** (v16+)
+- **npm** or **yarn**
+- **Git**
+
+### 🛠 Setup
+
+```bash
+git clone https://github.com/likhonsheikh54/Lightning.git
 cd Lightning
-
-Clones the Lightning project to your local machine.
-
-Install Dependencies
 npm install
-
-Installs all required packages, including Next.js, Tailwind CSS, and Shadcn/UI.
-
-Run the Development Server
 npm run dev
+```
 
-Starts the development server. Access your app at http://localhost:3000.
+Visit [http://localhost:3000](http://localhost:3000)
 
+---
 
+## ✨ Example Prompt Usage
 
-Usage and Features
-Lightning harnesses AI to generate production-grade code from natural language prompts, supporting multiple AI providers for flexibility. Below is an example of its capabilities:
-Example: Generating a Login Page
-Prompt:"Create a login page with email and password fields, using Shadcn/UI components and Tailwind CSS."
-Generated Code:
+### Prompt:
+> "Create a login page with email and password fields, using Shadcn/UI components and Tailwind CSS."
+
+### AI Output:
+
+```tsx
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -69,61 +75,36 @@ export const Login = () => {
     </div>
   );
 };
+```
 
-Supported AI Providers
-Lightning integrates seamlessly with leading AI providers:
+---
 
-OpenAI: Use models like gpt-3.5-turbo or gpt-4.
-Together AI: Leverage togethercomputer/llama-2-70b-chat for advanced completions.
-Groq: Utilize mixtral-8x7b-32768 for high-performance generation.
+## 🤖 AI Provider Support
 
-Configure your preferred provider by setting the appropriate API key in your environment variables (see Configuration).
-Key Features
+Configure any or all:
 
-AI-Powered Code Generation: Transforms prompts into full-stack applications.
-Modular Architecture: Ensures scalability and maintainability.
-Seamless Integration: Works with Vercel, Next.js, Tailwind CSS, and Shadcn/UI.
-Multi-AI Support: Choose from OpenAI, Together AI, Groq, and more.
-
-
-Configuration
-Environment Variables
-Create a .env.local file in the project root and add the following variables based on your chosen AI provider(s):
+```env
 OPENAI_API_KEY=your_openai_api_key
 TOGETHER_API_KEY=your_together_api_key
 GROQ_API_KEY=your_groq_api_key
+```
 
-Customizing AI Behavior
-Lightning's AI agent, v0, is highly configurable:
+---
 
-v0.txt: Defines the blueprint and structure, including folder organization, UI rules, and security guidelines. Edit this file to adjust the AI's output structure.
-system.txt: Contains system prompt rules and language preferences. Modify it to tailor the AI's behavior and coding style.
+## 🧠 AI Agent v0 Configuration
 
-AI Agent Configuration
-The v0 agent is designed for high-quality, production-ready code:
+| File          | Role                                          |
+|---------------|-----------------------------------------------|
+| `v0.txt`      | Blueprint for folder structure & design rules |
+| `system.txt`  | System prompt behavior for secure output      |
 
-Source Files:
-system.txt: Sets behavioral rules, ensuring secure, performant, and accessible code.
-v0.txt: Specifies folder structure (/app, /components, /lib, etc.) and UI standards (e.g., black backgrounds, rounded corners).
+> These files can be dynamically edited via GitHub and auto-loaded at runtime.
 
+---
 
-Dynamic Updates: Behavior can be updated via GitHub edits to these files, fetched dynamically from:
-v0.txt
-system.txt
+## 🏗️ Architecture
 
-
-
-
-Architecture
-Lightning's architecture is modular and AI-driven, ensuring scalability and maintainability. Below is an overview of its key components:
-
-AI Agent (v0): The core of Lightning, responsible for interpreting prompts and generating code. It reads from v0.txt and system.txt to understand the desired structure and behavior.
-Frontend: Built with Next.js, Tailwind CSS, and Shadcn/UI for responsive, modern UIs.
-Backend: Utilizes Next.js API routes for server-side logic and data handling.
-Deployment: Optimized for Vercel, with serverless functions and automatic scaling.
-Configuration: Environment variables and configuration files (v0.txt, system.txt) allow for flexible customization.
-
-Architecture Diagram
+```mermaid
 graph TD
     A[User Prompt] --> B[AI Agent v0]
     B --> C[Code Generation]
@@ -132,65 +113,65 @@ graph TD
     D --> F[Deployment: Vercel]
     E --> F
     G[Configuration: v0.txt, system.txt] --> B
+```
 
-This diagram illustrates how user prompts are processed by the AI agent, which generates both frontend and backend code, configured by v0.txt and system.txt, and deployed seamlessly to Vercel.
+---
 
-Technologies Used
-Lightning leverages a modern, robust tech stack:
+## 📁 Folder Structure
 
+```
+/app         → App Router pages
+/api         → API routes
+/components  → UI Components
+/lib         → Utilities
+/hooks       → Custom React hooks
+/types       → TypeScript interfaces/types
+/utils       → Common helpers
+/public      → Static assets
+/styles      → Global CSS
+```
 
+---
 
-Technology
-Purpose
+## 🔧 Standards
 
+### ✅ UI
+- Black background (`#000000`)
+- Rounded corners (≥ 0.5rem)
+- Responsive, dark mode, mobile-first
+- Accessible (WCAG AA)
 
+### 🔒 Security
+- OWASP Top 10
+- Zod validation
+- CSRF, CSP, rate limiting
 
-Vercel
-Serverless deployment and scalability
+### 📊 SEO
+- Metadata API
+- robots.txt + sitemap
+- Open Graph + Twitter cards
+- JSON-LD schema
 
+### ⚡ Performance
+- Core Web Vitals
+- Code splitting, lazy loading
+- SSR and edge functions
+- Image optimization
 
-Next.js
-React framework with App Router
+---
 
+## 🚀 Deployment (Vercel)
 
-Tailwind CSS
-Utility-first CSS for rapid design
+1. Push to GitHub
+2. Connect GitHub to Vercel
+3. Add environment variables
+4. Deploy with 1-click
 
+### 🔁 GitHub Actions
 
-Shadcn/UI
-Modern UI components for fast development
+`.github/workflows/deploy.yml`
 
-
-TypeScript
-Type safety and maintainability
-
-
-
-Deployment
-Deploying to Vercel
-
-Push your code to a GitHub repository.
-Connect the repository to Vercel via the Vercel dashboard.
-Set environment variables (e.g., OPENAI_API_KEY) in Vercel’s settings.
-Deploy the application with a single click.
-
-CI/CD with GitHub Actions
-Lightning includes a GitHub Actions workflow for automated deployment:
-
-Trigger: Pushes to the main branch.
-Steps:
-Checks out the code.
-Sets up Node.js (v16+).
-Installs dependencies and builds the project.
-Deploys to Vercel using npx vercel --token=$VERCEL_TOKEN.
-
-
-
-Setup:
-
-Add a VERCEL_TOKEN secret in your GitHub repository settings under Secrets and variables > Actions.
-
-Example workflow (.github/workflows/deploy.yml):
+```yaml
 name: Deploy to Vercel
 on:
   push:
@@ -211,24 +192,48 @@ jobs:
         run: npm run build
       - name: Deploy to Vercel
         run: npx vercel --token=${{ secrets.VERCEL_TOKEN }}
+```
 
+---
 
-Contributing
-We welcome contributions to Lightning! Follow these steps:
+## 🧪 Testing
 
-Fork the repository at github.com/likhonsheikhcodes/Lightning.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -m "Add your feature").
-Open a pull request.
+- **Jest** – unit tests
+- **React Testing Library** – component tests
+- **Cypress** – E2E testing
+- **Lighthouse** – performance
+- **axe-core** – accessibility
 
-For support or questions, reach out via:
+---
 
-GitHub: likhonsheikhcodes/Lightning
-Telegram: t.me/likhonsheikh
-Website: likhon.dev
+## 📊 Monitoring
 
+- **Vercel Analytics**
+- **Error & performance monitoring**
+- **User analytics**
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+---
 
-© 2025 ⚡ Likhon Sheikh | All rights reserved.
+## 🙌 Contributing
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit changes
+4. Open a PR
+
+Join the dev circle:
+
+- Telegram: [t.me/likhonsheikh](https://t.me/likhonsheikh)
+- GitHub: [github.com/likhonsheikh54](https://github.com/likhonsheikh54)
+- Website: [likhon.dev](https://likhon.dev)
+
+---
+
+## 📄 License
+
+**MIT License** – See `LICENSE` file.
+
+---
+Just say the word ⚡
+
+**Built with ❤️ by Likhon Sheikh.**
