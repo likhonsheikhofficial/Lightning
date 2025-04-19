@@ -2,7 +2,7 @@
 <div align="center">
   <img src="info/banner.svg" alt="Lightning Logo" width="200"/>
   
-  ![AI Pulse](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/ai-pulse.svg#gh-light-mode-only)
+
   ![Code Flow](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/code-flow.svg#gh-dark-mode-only)
 
   [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
