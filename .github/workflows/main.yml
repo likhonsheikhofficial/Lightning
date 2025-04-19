@@ -1,0 +1,37 @@
+{
+  "prompts": {
+    "homepage": "Generate engaging homepage content for a tech company website that specializes in AI solutions. Include a compelling headline, a brief introduction, and a call to action.",
+    "about": "Create an about us section highlighting our company's innovation, expertise, and mission. Include a brief history and our core values.",
+    "services": "List 5 key AI services with detailed descriptions. For each service, include a title, a paragraph description, and potential benefits for clients.",
+    "blog": "Generate 3 blog post summaries about recent developments in AI technology. Each summary should have a title, date, and brief description.",
+    "team": "Create content for a team section showcasing fictional leadership roles. Include positions like CEO, CTO, and Lead Developers with brief professional backgrounds."
+  },
+  "files": {
+    "index.html": {
+      "selector": "#main-content",
+      "prompt": "homepage"
+    },
+    "about.html": {
+      "selector": "#about-section",
+      "prompt": "about"
+    },
+    "services.html": {
+      "selector": "#services-list",
+      "prompt": "services"
+    },
+    "blog.html": {
+      "selector": "#blog-posts",
+      "prompt": "blog"
+    },
+    "team.html": {
+      "selector": "#team-members",
+      "prompt": "team"
+    }
+  },
+  "settings": {
+    "model": "llama3-70b-8192",
+    "temperature": 0.7,
+    "max_tokens": 2048,
+    "system_prompt": "You are a helpful assistant that generates high-quality website content."
+  }
+}
