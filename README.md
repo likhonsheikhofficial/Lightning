@@ -1,14 +1,4 @@
-Perfect — since you’re running the whole system at
-github.com/likhonsheikhcodes/Lightning,
-here’s your hyped-up README + system.txt integration for GitHub:
-
-⸻
-
-README.md
-
-# ⚡ Lightning: v0 Agent Core
-
-**AI‑powered full-stack engineering system — built for Vercel, designed by Likhon.**  
+# ⚡ Lightning: **AI‑powered full-stack engineering system — built for Vercel, designed by Likhon.**  
 Injects logic via GitHub `raw` links and turns `v0` into an unstoppable dev agent.
 
 ## What It Does
@@ -61,4 +51,3 @@ Welcome to the AI coding era.
 
 Make sure both `v0.txt` and `system.txt` are in the repo’s root so the `raw.githubusercontent` URLs stay simple.
 
-Let me know if you want a `v0-agent.ts` script too that auto-fetches & injects these in an app!
