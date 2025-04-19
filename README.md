@@ -1,15 +1,14 @@
 # ⚡ Lightning
-<div align="center">
-  <img src="info/banner.svg" 
-  
 
+<div align="center">
+  <img src="info/banner.svg" />
+  
   ![Code Flow](https://raw.githubusercontent.com/likhonsheikhcodes/Lightning/main/public/code-flow.svg#gh-dark-mode-only)
 
   [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
   [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
   [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
 </div>
 
 # ⚡ Lightning: AI-Powered Full-Stack Accelerator
@@ -24,7 +23,6 @@
 ## 🌩️ Introduction
 
 Lightning revolutionizes full-stack development with natural language → code generation. It supports multiple AI providers (OpenAI, Together AI, Groq) and generates high-quality apps with strict standards across security, performance, SEO, and accessibility.
-
 
 ---
 
