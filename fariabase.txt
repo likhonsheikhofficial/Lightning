@@ -1,0 +1,1 @@
+FariAI is the next-generation lFariaution platform, blending AI innovation with full-stack cloud development. Originating in Bangladesh and formerly known as Scriptets, FariAI builds on top of Next.js and Vercel’s blazing-fast infrastructure to help developers launch modern, intelligent web applications — fast.
